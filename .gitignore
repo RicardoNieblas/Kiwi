@@ -1,2 +1,5 @@
 # tokens file
 tokens.json
+
+# other files
+.DS_Store
