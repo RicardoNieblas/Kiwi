@@ -1,4 +1,4 @@
-import discord, json, random
+import discord, json, os, random
 from discord.ext import commands
 
 kiwiGreen = discord.Colour.from_rgb(0, 200, 118)
@@ -18,6 +18,7 @@ async def on_ready():
 @client.event
 async def on_message(message):
     if "owo" in message.content.lower() and message.author.id != 894472594118557777: await message.channel.send("OwO")
+    await client.process_commands(message)
 
 # confess command
 @client.command(brief = "Makes your message anonymous")
@@ -112,6 +113,124 @@ async def pp(ctx, tag: discord.Member = None):
     ))
 
 # ----- Fun Commands end here ----- #
+
+# ----- Reaction Commands start here ----- #
+
+# blush command
+@client.command(brief = "¡You're blushing!")
+async def blush(ctx):
+    """Type this command and Kiwi will show a GIF saying you're blushing."""
+    await ctx.send(embed = discord.Embed(
+        title = str(ctx.author.name) + random.choice([" is blushing!", "'s face turns red'!", " blushes! >///<"]),
+        color = kiwiGreen
+    ).set_image(url = random.choice(list(json.load(open("assets/reactions.json"))["blush"].values()))))
+
+# cry command
+@client.command(brief = "You're crying!")
+async def cry(ctx):
+    """Type this command and Kiwi will show a GIF saying you're crying."""
+    await ctx.send(embed = discord.Embed(
+        title = str(ctx.author.name) + random.choice([" is crying...", " needs a hug...", " feels sad...", " TTwTT", " cries..."]),
+        color = kiwiGreen
+    ).set_image(url = random.choice(list(json.load(open("assets/reactions.json"))["cry"].values()))))
+
+# dance command
+@client.command(brief = "Time to dance!")
+async def dance(ctx):
+    """Type this command and Kiwi will show a GIF saying you're dancing."""
+    await ctx.send(embed = discord.Embed(
+        title = str(ctx.author.name) + random.choice([" is dancing!", " moves some booty!", " got them moves!"]),
+        color = kiwiGreen
+    ).set_image(url = random.choice(list(json.load(open("assets/reactions.json"))["dance"].values()))))
+
+# happy command
+@client.command(brief = "If you're happy and you know it clap your hands!")
+async def happy(ctx):
+    """Type this command and Kiwi will show a GIF saying you're dancing."""
+    await ctx.send(embed = discord.Embed(
+        title = str(ctx.author.name) + random.choice([" is happy!", " feels happy!"]),
+        color = kiwiGreen
+    ).set_image(url = random.choice(list(json.load(open("assets/reactions.json"))["happy"].values()))))
+
+# teehee command
+@client.command(brief = "ehe, te nandayo?")
+async def teehee(ctx):
+    """Type this command and Kiwi will show a GIF with a grin."""
+    await ctx.send(embed = discord.Embed(
+        title = str(ctx.author.name) + " c;",
+        color = kiwiGreen
+    ).set_image(url = random.choice(list(json.load(open("assets/reactions.json"))["teehee"].values()))))
+
+# thinking command
+@client.command(brief = "Your dumb*** does not understand.")
+async def thinking(ctx):
+    """Type this command and Kiwi will show a GIF saying you're thinking."""
+    await ctx.send(embed = discord.Embed(
+        title = str(ctx.author.name) + random.choice([" is thinking...", " can't process that...", " is trying to understand...", " is processing..."]),
+        color = kiwiGreen
+    ).set_image(url = random.choice(list(json.load(open("assets/reactions.json"))["thinking"].values()))))
+
+# hug command
+@client.command(brief = "Your only chance to hug her, she won't let you irl...")
+async def hug(ctx, tag: discord.Member):
+    """Type this command and Kiwi will show a GIF saying you're hugging someone."""
+    if tag == ctx.author: await ctx.send(random.choice("I'll hug you...", "Do you need a hug?"))
+    elif tag: await ctx.send(embed = discord.Embed(
+            title = str(ctx.author.name) + random.choice([" hugs ", " gives a hug to "]) + str(tag.name) + "!",
+            color = kiwiGreen
+    ).set_image(url = random.choice(list(json.load(open("assets/reactions.json"))["hug"].values()))))
+
+# kill command
+@client.command(brief = "Omae wa mou, shindeirou. Nani?")
+async def kill(ctx, tag: discord.Member):
+    """Type this command and Kiwi will show a GIF saying you're killing someone."""
+    if tag == ctx.author: await ctx.send(random.choice("Don't do it TTwTT", "Don't kill yourself TTwTT", "Umm...", "Are you sure?"))
+    elif tag: await ctx.send(embed = discord.Embed(
+            title = str(ctx.author.name) + random.choice([" killed ", " has killed ", " kills "]) + str(tag.name) + "!",
+            color = kiwiGreen
+    ).set_image(url = random.choice(list(json.load(open("assets/reactions.json"))["kill"].values()))))
+
+# punch command
+@client.command(brief = "ONE PUUUUUUUUUUUUUUUNCH!!!")
+async def punch(ctx, tag: discord.Member):
+    """Type this command and Kiwi will show a GIF saying you're punching someone."""
+    if tag == ctx.author: await ctx.send(random.choice("Don't do it!", "Don't punch yourself!", "Umm...", "Are you sure?"))
+    elif tag: await ctx.send(embed = discord.Embed(
+            title = str(ctx.author.name) + random.choice([" punches ", " wacks ", " punched "]) + str(tag.name) + "!",
+            color = kiwiGreen
+    ).set_image(url = random.choice(list(json.load(open("assets/reactions.json"))["punch"].values()))))
+
+# slap command
+@client.command(brief = "Just don't you dare slap a Karen, ok?")
+async def slap(ctx, tag: discord.Member):
+    """Type this command and Kiwi will show a GIF saying you're slapping someone."""
+    if tag == ctx.author: await ctx.send(random.choice("Don't do it!", "Don't slap yourself!", "Umm...", "Are you sure?"))
+    elif tag: await ctx.send(embed = discord.Embed(
+            title = str(ctx.author.name) + random.choice([" slaps ", " slapped "]) + str(tag.name) + "!",
+            color = kiwiGreen
+    ).set_image(url = random.choice(list(json.load(open("assets/reactions.json"))["slap"].values()))))
+
+# stare command
+@client.command(brief = "What ya lookin' at?")
+async def stare(ctx, tag: discord.Member):
+    """Type this command and Kiwi will show a GIF saying you're staring at someone."""
+    if tag == ctx.author: await ctx.send("Are you... looking at a mirror?")
+    elif tag: await ctx.send(embed = discord.Embed(
+            title = str(ctx.author.name) + random.choice([" stares at ", " looks directly to "]) + str(tag.name) + "!",
+            color = kiwiGreen
+    ).set_image(url = random.choice(list(json.load(open("assets/reactions.json"))["stare"].values()))))
+
+# wave command
+@client.command(brief = "OwO hewwo my fwiend!! (cringe but this command just says hi)")
+async def wave(ctx, tag: discord.Member):
+    """Type this command and Kiwi will show a GIF saying you're waving at someone."""
+    if tag == ctx.author: await ctx.send("Are you... looking at a mirror?")
+    elif tag: await ctx.send(embed = discord.Embed(
+            title = str(ctx.author.name) + random.choice([" waves at ", " says hi to "]) + str(tag.name) + "!",
+            color = kiwiGreen
+    ).set_image(url = random.choice(list(json.load(open("assets/reactions.json"))["wave"].values()))))
+
+# ----- Reaction Commands end here ----- #
 
 # will fail if answer is not "kiwi" or "beta"
 # client.run(json.load(open("tokens.json"))[str(input("Select a client: ").lower())])

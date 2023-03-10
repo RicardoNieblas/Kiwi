@@ -1,0 +1,125 @@
+{
+	"blush" : {
+		"blush01" : "",
+		"blush02" : "",
+		"blush03" : "",
+		"blush04" : "",
+		"blush05" : "",
+		"blush06" : ""
+	},
+	"cry" : {
+		"cry01" : "",
+		"cry02" : "",
+		"cry03" : "",
+		"cry04" : "",
+		"cry05" : "",
+		"cry06" : "",
+		"cry07" : "",
+		"cry08" : "",
+		"cry09" : ""
+	},
+	"dance" : {
+		"dance01" : "",
+		"dance02" : "",
+		"dance03" : "",
+		"dance04" : "",
+		"dance05" : "",
+		"dance06" : "",
+		"dance07" : "",
+		"dance08" : "",
+		"dance09" : ""
+	},
+	"happy" : {
+		"happy01" : "",
+		"happy02" : "",
+		"happy03" : "",
+		"happy04" : "",
+		"happy05" : "",
+		"happy06" : "",
+		"happy07" : "",
+		"happy08" : ""
+	},
+	"hug" : {
+		"hug01" : "",
+		"hug02" : "",
+		"hug03" : "",
+		"hug04" : "",
+		"hug05" : "",
+		"hug06" : "",
+		"hug07" : "",
+		"hug08" : "",
+		"hug09" : "",
+		"hug10" : "",
+		"hug11" : "",
+		"hug12" : ""
+	},
+	"kill" : {
+		"kill01" : "",
+		"kill02" : "",
+		"kill03" : ""
+	},
+	"punch" : {
+		"punch01" : "",
+		"punch02" : "",
+		"punch03" : "",
+		"punch04" : "",
+		"punch05" : "",
+		"punch06" : "",
+		"punch07" : "",
+		"punch08" : "",
+		"punch09" : ""
+	},
+	"slap" : {
+		"slap01" : "",
+		"slap02" : "",
+		"slap03" : "",
+		"slap04" : "",
+		"slap05" : "",
+		"slap06" : "",
+		"slap07" : "",
+		"slap08" : "",
+		"slap09" : "",
+		"slap10" : "",
+		"slap11" : ""
+	},
+	"stare" : {
+		"stare01" : "",
+		"stare02" : "",
+		"stare03" : "",
+		"stare04" : "",
+		"stare05" : "",
+		"stare06" : "",
+		"stare07" : "",
+		"stare08" : ""
+	},
+	"teehee" : {
+		"teehee01" : "",
+		"teehee02" : "",
+		"teehee03" : "",
+		"teehee04" : "",
+		"teehee05" : "",
+		"teehee06" : "",
+		"teehee07" : "",
+		"teehee08" : "",
+		"teehee09" : "",
+		"teehee10" : "",
+		"teehee11" : ""
+	},
+	"thinking" : {
+		"thinking01" : "",
+		"thinking02" : "",
+		"thinking03" : "",
+		"thinking04" : "",
+		"thinking05" : "",
+		"thinking06" : ""
+	},
+	"wave" : {
+		"wave01" : "",
+		"wave02" : "",
+		"wave03" : "",
+		"wave04" : "",
+		"wave05" : "",
+		"wave06" : "",
+		"wave07" : ""
+	}
+}
