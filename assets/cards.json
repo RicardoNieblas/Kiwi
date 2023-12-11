@@ -1,0 +1,66 @@
+{
+	"spades" : {
+		"s01" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/s01.png",
+		"s02" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/s02.png",
+		"s03" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/s03.png",
+		"s04" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/s04.png",
+		"s05" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/s05.png",
+		"s06" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/s06.png",
+		"s07" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/s07.png",
+		"s08" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/s08.png",
+		"s09" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/s09.png",
+		"s10" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/s10.png",
+		"s11" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/s11.png",
+		"s12" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/s12.png",
+		"s13" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/s13.png"
+	},
+	"clubs" : {
+		"c01" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/c01.png",
+		"c02" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/c02.png",
+		"c03" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/c03.png",
+		"c04" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/c04.png",
+		"c05" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/c05.png",
+		"c06" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/c06.png",
+		"c07" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/c07.png",
+		"c08" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/c08.png",
+		"c09" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/c09.png",
+		"c10" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/c10.png",
+		"c11" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/c11.png",
+		"c12" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/c12.png",
+		"c13" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/c13.png"
+	},
+	"diamonds" : {
+		"d01" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/d01.png",
+		"d02" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/d02.png",
+		"d03" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/d03.png",
+		"d04" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/d04.png",
+		"d05" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/d05.png",
+		"d06" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/d06.png",
+		"d07" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/d07.png",
+		"d08" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/d08.png",
+		"d09" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/d09.png",
+		"d10" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/d10.png",
+		"d11" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/d11.png",
+		"d12" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/d12.png",
+		"d13" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/d13.png"
+	},
+	"hearts" : {
+		"h01" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/h01.png",
+		"h02" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/h02.png",
+		"h03" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/h03.png",
+		"h04" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/h04.png",
+		"h05" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/h05.png",
+		"h06" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/h06.png",
+		"h07" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/h07.png",
+		"h08" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/h08.png",
+		"h09" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/h09.png",
+		"h10" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/h10.png",
+		"h11" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/h11.png",
+		"h12" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/h12.png",
+		"h13" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/h13.png"
+	},
+	"jokers" : {
+		"j01" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/j01.png",
+		"j02" : "https://raw.githubusercontent.com/RicardoNieblas/Kiwi/main/assets/cards/j02.png"
+	}
+}

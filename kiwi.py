@@ -1,4 +1,5 @@
 import discord, json, os, random
+import asyncio
 from discord.ext import commands
 
 kiwiGreen = discord.Colour.from_rgb(0, 200, 118)
@@ -17,7 +18,8 @@ async def on_ready():
 # owo event
 @client.event
 async def on_message(message):
-    if "owo" in message.content.lower() and message.author.id != 894472594118557777: await message.channel.send("OwO")
+    if "owo" in message.content.lower() and message.author.id != 894472594118557777:
+        if random.randint(1, 2) == 1: await message.channel.send("OwO")
     await client.process_commands(message)
 
 # confess command
@@ -120,6 +122,7 @@ async def pp(ctx, tag: discord.Member = None):
 @client.command(brief = "¡You're blushing!")
 async def blush(ctx):
     """Type this command and Kiwi will show a GIF saying you're blushing."""
+    await ctx.message.delete()
     await ctx.send(embed = discord.Embed(
         title = str(ctx.author.name) + random.choice([" is blushing!", "'s face turns red'!", " blushes! >///<"]),
         color = kiwiGreen
@@ -129,6 +132,7 @@ async def blush(ctx):
 @client.command(brief = "You're crying!")
 async def cry(ctx):
     """Type this command and Kiwi will show a GIF saying you're crying."""
+    await ctx.message.delete()
     await ctx.send(embed = discord.Embed(
         title = str(ctx.author.name) + random.choice([" is crying...", " needs a hug...", " feels sad...", " TTwTT", " cries..."]),
         color = kiwiGreen
@@ -138,6 +142,7 @@ async def cry(ctx):
 @client.command(brief = "Time to dance!")
 async def dance(ctx):
     """Type this command and Kiwi will show a GIF saying you're dancing."""
+    await ctx.message.delete()
     await ctx.send(embed = discord.Embed(
         title = str(ctx.author.name) + random.choice([" is dancing!", " moves some booty!", " got them moves!"]),
         color = kiwiGreen
@@ -147,6 +152,7 @@ async def dance(ctx):
 @client.command(brief = "If you're happy and you know it clap your hands!")
 async def happy(ctx):
     """Type this command and Kiwi will show a GIF saying you're dancing."""
+    await ctx.message.delete()
     await ctx.send(embed = discord.Embed(
         title = str(ctx.author.name) + random.choice([" is happy!", " feels happy!"]),
         color = kiwiGreen
@@ -156,6 +162,7 @@ async def happy(ctx):
 @client.command(brief = "ehe, te nandayo?")
 async def teehee(ctx):
     """Type this command and Kiwi will show a GIF with a grin."""
+    await ctx.message.delete()
     await ctx.send(embed = discord.Embed(
         title = str(ctx.author.name) + " c;",
         color = kiwiGreen
@@ -165,6 +172,7 @@ async def teehee(ctx):
 @client.command(brief = "Your dumb*** does not understand.")
 async def thinking(ctx):
     """Type this command and Kiwi will show a GIF saying you're thinking."""
+    await ctx.message.delete()
     await ctx.send(embed = discord.Embed(
         title = str(ctx.author.name) + random.choice([" is thinking...", " can't process that...", " is trying to understand...", " is processing..."]),
         color = kiwiGreen
@@ -174,6 +182,7 @@ async def thinking(ctx):
 @client.command(brief = "Your only chance to hug her, she won't let you irl...")
 async def hug(ctx, tag: discord.Member):
     """Type this command and Kiwi will show a GIF saying you're hugging someone."""
+    await ctx.message.delete()
     if tag == ctx.author: await ctx.send(random.choice("I'll hug you...", "Do you need a hug?"))
     elif tag: await ctx.send(embed = discord.Embed(
             title = str(ctx.author.name) + random.choice([" hugs ", " gives a hug to "]) + str(tag.name) + "!",
@@ -184,6 +193,7 @@ async def hug(ctx, tag: discord.Member):
 @client.command(brief = "Omae wa mou, shindeirou. Nani?")
 async def kill(ctx, tag: discord.Member):
     """Type this command and Kiwi will show a GIF saying you're killing someone."""
+    await ctx.message.delete()
     if tag == ctx.author: await ctx.send(random.choice("Don't do it TTwTT", "Don't kill yourself TTwTT", "Umm...", "Are you sure?"))
     elif tag: await ctx.send(embed = discord.Embed(
             title = str(ctx.author.name) + random.choice([" killed ", " has killed ", " kills "]) + str(tag.name) + "!",
@@ -194,6 +204,7 @@ async def kill(ctx, tag: discord.Member):
 @client.command(brief = "ONE PUUUUUUUUUUUUUUUNCH!!!")
 async def punch(ctx, tag: discord.Member):
     """Type this command and Kiwi will show a GIF saying you're punching someone."""
+    await ctx.message.delete()
     if tag == ctx.author: await ctx.send(random.choice("Don't do it!", "Don't punch yourself!", "Umm...", "Are you sure?"))
     elif tag: await ctx.send(embed = discord.Embed(
             title = str(ctx.author.name) + random.choice([" punches ", " wacks ", " punched "]) + str(tag.name) + "!",
@@ -204,6 +215,7 @@ async def punch(ctx, tag: discord.Member):
 @client.command(brief = "Just don't you dare slap a Karen, ok?")
 async def slap(ctx, tag: discord.Member):
     """Type this command and Kiwi will show a GIF saying you're slapping someone."""
+    await ctx.message.delete()
     if tag == ctx.author: await ctx.send(random.choice("Don't do it!", "Don't slap yourself!", "Umm...", "Are you sure?"))
     elif tag: await ctx.send(embed = discord.Embed(
             title = str(ctx.author.name) + random.choice([" slaps ", " slapped "]) + str(tag.name) + "!",
@@ -214,6 +226,7 @@ async def slap(ctx, tag: discord.Member):
 @client.command(brief = "What ya lookin' at?")
 async def stare(ctx, tag: discord.Member):
     """Type this command and Kiwi will show a GIF saying you're staring at someone."""
+    await ctx.message.delete()
     if tag == ctx.author: await ctx.send("Are you... looking at a mirror?")
     elif tag: await ctx.send(embed = discord.Embed(
             title = str(ctx.author.name) + random.choice([" stares at ", " looks directly to "]) + str(tag.name) + "!",
@@ -224,6 +237,7 @@ async def stare(ctx, tag: discord.Member):
 @client.command(brief = "OwO hewwo my fwiend!! (cringe but this command just says hi)")
 async def wave(ctx, tag: discord.Member):
     """Type this command and Kiwi will show a GIF saying you're waving at someone."""
+    await ctx.message.delete()
     if tag == ctx.author: await ctx.send("Are you... looking at a mirror?")
     elif tag: await ctx.send(embed = discord.Embed(
             title = str(ctx.author.name) + random.choice([" waves at ", " says hi to "]) + str(tag.name) + "!",
@@ -231,6 +245,30 @@ async def wave(ctx, tag: discord.Member):
     ).set_image(url = random.choice(list(json.load(open("assets/reactions.json"))["wave"].values()))))
 
 # ----- Reaction Commands end here ----- #
+
+# ----- Play Commands start here ----- #
+
+@client.command(brief = "Play a game with Kiwi!")
+async def rps(ctx):
+    """Play rock paper scissors with Kiwi!"""
+    await ctx.message.delete()
+    await ctx.send("Rock, paper, scissors! Choose one!")
+    try: msg = await client.wait_for('message', timeout = 10.0)
+    except asyncio.TimeoutError: await ctx.send("You took too long to respond. Try again!")
+    else:
+        if msg.content.lower() == "rock" or "paper" or "scissors":
+            await ctx.send(random.choice(["You won!", "You lost!", "It's a tie!"]))
+        else:
+            await ctx.send("That's not a valid option! Try again!")
+
+@client.command(brief = "Play a game with Kiwi!")
+async def get21(ctx):
+    await ctx.send(embed = discord.Embed(
+        title = "Title",
+        color = kiwiGreen
+    ).set_image(url = random.choice(list(json.load(open("assets/reactions.json"))["blush"].values()))))
+
+# ----- Play Commands end here ----- #
 
 # will fail if answer is not "kiwi" or "beta"
 # client.run(json.load(open("tokens.json"))[str(input("Select a client: ").lower())])

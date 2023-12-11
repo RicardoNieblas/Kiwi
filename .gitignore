@@ -2,4 +2,4 @@
 tokens.json
 
 # other files
-.DS_Store
+**/.DS_Store
